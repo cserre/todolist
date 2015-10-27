@@ -1,0 +1,6 @@
+<h1>List of tasks</h1>
+<% @tasks.each do |task| %>
+  <li><%= "#{task.done ? 'X' : 'O'} - " %>
+  <%= link_to task.description, task_path(task) %></li>
+<% end %>
+<p><%= link_to 'Add a task', new_task_path %></p>

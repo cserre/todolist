@@ -1,0 +1,6 @@
+<h1>Task selected</h1>
+<p><%= "#{@task.done ? 'X' : 'O'} - " %>
+<%= @task.description %></p>
+<p><%= link_to 'Back', tasks_path %></p>
+<p><%= link_to 'Edit', edit_task_path(@task) %></p>
+<p><%= link_to 'Delete', task_path(@task), method: :delete %></p>
